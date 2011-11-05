@@ -15,9 +15,12 @@
 }
 
 @property (nonatomic, strong) NSString *specURL;
+@property (nonatomic, strong) NSDictionary *response;
 
 - (id)initWithURL:(NSString *)specURL;
 - (void)reloadSpec;
 - (void)showLoadingState:(BOOL)isLoading;
+- (NSDictionary *)apiForIndexPath:(NSIndexPath *)indexPath;
+- (NSDictionary *)apiGroupForSection:(NSInteger)section;
 
 @end
