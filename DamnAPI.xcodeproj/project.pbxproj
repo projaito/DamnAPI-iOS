@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A32F56514645299008EAD4B /* ViewControllerCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A32F56414645299008EAD4B /* ViewControllerCoordinator.m */; };
+		1A32F5B91465A499008EAD4B /* DASpecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A32F5B81465A499008EAD4B /* DASpecViewController.m */; };
 		1A72620E1462FBF300E3982D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A72620D1462FBF300E3982D /* UIKit.framework */; };
 		1A7262101462FBF300E3982D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A72620F1462FBF300E3982D /* Foundation.framework */; };
 		1A7262121462FBF300E3982D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7262111462FBF300E3982D /* CoreGraphics.framework */; };
@@ -14,7 +16,6 @@
 		1A72621A1462FBF300E3982D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7262191462FBF300E3982D /* main.m */; };
 		1A72621E1462FBF300E3982D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A72621D1462FBF300E3982D /* AppDelegate.m */; };
 		1A7262211462FBF300E3982D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7262201462FBF300E3982D /* ViewController.m */; };
-		1A7262241462FBF300E3982D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7262221462FBF300E3982D /* ViewController.xib */; };
 		1A72622C1462FBF300E3982D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A72622B1462FBF300E3982D /* SenTestingKit.framework */; };
 		1A72622D1462FBF300E3982D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A72620D1462FBF300E3982D /* UIKit.framework */; };
 		1A72622E1462FBF300E3982D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A72620F1462FBF300E3982D /* Foundation.framework */; };
@@ -44,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A32F56314645299008EAD4B /* ViewControllerCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerCoordinator.h; sourceTree = "<group>"; };
+		1A32F56414645299008EAD4B /* ViewControllerCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerCoordinator.m; sourceTree = "<group>"; };
+		1A32F5B71465A499008EAD4B /* DASpecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DASpecViewController.h; sourceTree = "<group>"; };
+		1A32F5B81465A499008EAD4B /* DASpecViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DASpecViewController.m; sourceTree = "<group>"; };
 		1A7262091462FBF300E3982D /* DamnAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DamnAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A72620D1462FBF300E3982D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1A72620F1462FBF300E3982D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,7 +61,6 @@
 		1A72621D1462FBF300E3982D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1A72621F1462FBF300E3982D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1A7262201462FBF300E3982D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1A7262231462FBF300E3982D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		1A72622A1462FBF300E3982D /* DamnAPITests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DamnAPITests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A72622B1462FBF300E3982D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		1A7262331462FBF300E3982D /* DamnAPITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DamnAPITests-Info.plist"; sourceTree = "<group>"; };
@@ -150,7 +154,10 @@
 				1A72621D1462FBF300E3982D /* AppDelegate.m */,
 				1A72621F1462FBF300E3982D /* ViewController.h */,
 				1A7262201462FBF300E3982D /* ViewController.m */,
-				1A7262221462FBF300E3982D /* ViewController.xib */,
+				1A32F56314645299008EAD4B /* ViewControllerCoordinator.h */,
+				1A32F56414645299008EAD4B /* ViewControllerCoordinator.m */,
+				1A32F5B71465A499008EAD4B /* DASpecViewController.h */,
+				1A32F5B81465A499008EAD4B /* DASpecViewController.m */,
 				1A7262141462FBF300E3982D /* Supporting Files */,
 			);
 			path = DamnAPI;
@@ -311,7 +318,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A7262181462FBF300E3982D /* InfoPlist.strings in Resources */,
-				1A7262241462FBF300E3982D /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +366,8 @@
 				1A7262AC1462FD2E00E3982D /* AFXMLRequestOperation.m in Sources */,
 				1A7262AD1462FD2E00E3982D /* UIImageView+AFNetworking.m in Sources */,
 				1A7262D41462FEB400E3982D /* JSONKit.m in Sources */,
+				1A32F56514645299008EAD4B /* ViewControllerCoordinator.m in Sources */,
+				1A32F5B91465A499008EAD4B /* DASpecViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,14 +396,6 @@
 				1A7262171462FBF300E3982D /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		1A7262221462FBF300E3982D /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A7262231462FBF300E3982D /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 		1A7262341462FBF300E3982D /* InfoPlist.strings */ = {
@@ -529,6 +529,7 @@
 				1A72623E1462FBF300E3982D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A72623F1462FBF300E3982D /* Build configuration list for PBXNativeTarget "DamnAPITests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +538,7 @@
 				1A7262411462FBF300E3982D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

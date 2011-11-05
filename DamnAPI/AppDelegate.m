@@ -9,18 +9,26 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "ViewControllerCoordinator.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+@synthesize coordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    
+    self.coordinator = [[ViewControllerCoordinator alloc] init];
+
+    self.viewController = [[ViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    self.viewController.delegate = self.coordinator;
+
+    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;
 }

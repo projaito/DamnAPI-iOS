@@ -8,6 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@protocol ViewControllerDelegate;
+
+@interface ViewController : UITableViewController {
+    NSMutableArray *_sections;
+}
+
+@property (nonatomic, strong) NSArray *sections;
+@property (nonatomic, assign) id <ViewControllerDelegate> delegate;
+
+- (id)objectAtIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
+
+@protocol ViewControllerDelegate <NSObject>
+
+@optional
+- (void)viewControllerDidLoad:(ViewController *)viewController;
+- (void)viewController:(ViewController *)viewController didSelectObject:(NSObject *)object atIndexPath:(NSIndexPath *)indexPath;
 
 @end
