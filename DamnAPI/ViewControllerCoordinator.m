@@ -19,7 +19,8 @@
 - (void)viewControllerDidLoad:(ViewController *)viewController {
     viewController.sections = [NSArray arrayWithObject:[NSArray arrayWithObjects:
                                                         @"https://raw.github.com/gist/1337052/440ddabe955b40fccb70ea2460ac182925af7e4c/api_spec.json",
-                                                        @"https://raw.github.com/gist/1338795/faa1f0056de928ce372b8db59c335523ef507a86/twitter_api.json",
+                                                        @"https://gist.github.com/raw/1338795/32dc957af4b80d9c2f18cd2605e97a0b1986ee20/twitter_api.json",
+                                                        @"https://gist.github.com/raw/1338795/7ca35c07a7f28c608d5cf64651baa6090a8165a6/twitter_api.json",
                                                         nil]];
 }
 
