@@ -4,3 +4,6 @@
 [submodule "Libraries/JSONKit"]
 	path = Libraries/JSONKit
 	url = https://github.com/johnezang/JSONKit.git
+[submodule "Libraries/JTObjectMapping"]
+	path = Libraries/JTObjectMapping
+	url = git@github.com:mystcolor/JTObjectMapping.git

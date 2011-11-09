@@ -8,9 +8,14 @@
 
 #import "DASpecViewController.h"
 #import "AFJSONRequestOperation.h"
+#import "DAApiSpec.h"
+#import "DAApiGroups.h"
+#import "DAApi.h"
+#import "NSObject+JTObjectMapping.h"
 
 @implementation DASpecViewController
 @synthesize specURL;
+@synthesize spec;
 @synthesize response;
 
 - (id)initWithURL:(NSString *)aSpecURL {
@@ -56,6 +61,17 @@
 
 - (void)setResponse:(NSDictionary *)aResponse {
     response = aResponse;
+    
+    NSDictionary *apiMapping = [NSDictionary dictionaryWithObjectsAndKeys:
+                                @"name", @"name",
+                                [DAApi mappingWithKey:@"apis" mapping:nil], @"apis",
+                                nil];
+    
+    self.spec = [DAApiSpec objectFromJSONObject:aResponse
+                                        mapping:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                 [DAApiGroups mappingWithKey:@"api_groups"
+                                                                     mapping:apiMapping], @"api_groups",
+                                                 nil]];
     [self.tableView reloadData];
 }
 
@@ -76,6 +92,7 @@
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         _responseView.text = [NSString stringWithFormat:@"%@", JSON];
         self.response = JSON;
+
         [self showLoadingState:NO];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
         _responseView.text = [NSString stringWithFormat:@"%@", error];
@@ -87,12 +104,12 @@
     [_queue addOperation:operation];
 }
 
-- (NSDictionary *)apiForIndexPath:(NSIndexPath *)indexPath {
-    return [[[self apiGroupForSection:indexPath.section] valueForKeyPath:@"apis"] objectAtIndex:indexPath.row];
+- (DAApi *)apiForIndexPath:(NSIndexPath *)indexPath {
+    return [[(DAApiGroups *)[self apiGroupForSection:indexPath.section] apis] objectAtIndex:indexPath.row];
 }
 
-- (NSDictionary *)apiGroupForSection:(NSInteger)section {
-    return [[self.response valueForKeyPath:@"api_groups"] objectAtIndex:section];
+- (DAApiGroups *)apiGroupForSection:(NSInteger)section {
+    return [self.spec.api_groups objectAtIndex:section];
 }
 
 #pragma mark - Table view data source
@@ -100,7 +117,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [[self.response objectForKey:@"api_groups"] count];
+    return [self.spec.api_groups count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -120,9 +137,9 @@
     }
     
     // Configure the cell...
-    NSDictionary *api = [self apiForIndexPath:indexPath];
-    cell.textLabel.text = [api valueForKeyPath:@"name"];
-    cell.detailTextLabel.text = [api valueForKeyPath:@"path"];
+    DAApi *api = [self apiForIndexPath:indexPath];
+    cell.textLabel.text = api.name;
+    cell.detailTextLabel.text = api.path;
     
     return cell;
 }
@@ -135,7 +152,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [[self apiGroupForSection:section] valueForKeyPath:@"name"];
+    return [(DAApiGroups *)[self apiGroupForSection:section] name];
 }
 
 @end

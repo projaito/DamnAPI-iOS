@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A23E1B714699E73002BBB85 /* JTDateMappings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A23E19614699E73002BBB85 /* JTDateMappings.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		1A23E1B814699E73002BBB85 /* JTMappings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A23E19814699E73002BBB85 /* JTMappings.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		1A23E1B914699E73002BBB85 /* NSObject+JTObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A23E19A14699E73002BBB85 /* NSObject+JTObjectMapping.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		1A23E1CA14699F19002BBB85 /* DAApiSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A23E1C914699F19002BBB85 /* DAApiSpec.m */; };
+		1A23E1CD1469A147002BBB85 /* DAApiGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A23E1CC1469A146002BBB85 /* DAApiGroups.m */; };
+		1A23E1D01469A29C002BBB85 /* DAApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A23E1CF1469A29C002BBB85 /* DAApi.m */; };
 		1A32F56514645299008EAD4B /* ViewControllerCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A32F56414645299008EAD4B /* ViewControllerCoordinator.m */; };
 		1A32F5B91465A499008EAD4B /* DASpecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A32F5B81465A499008EAD4B /* DASpecViewController.m */; };
 		1A72620E1462FBF300E3982D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A72620D1462FBF300E3982D /* UIKit.framework */; };
@@ -45,6 +51,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A23E19514699E73002BBB85 /* JTDateMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTDateMappings.h; path = JTObjectMapping/Source/JTDateMappings.h; sourceTree = "<group>"; };
+		1A23E19614699E73002BBB85 /* JTDateMappings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTDateMappings.m; path = JTObjectMapping/Source/JTDateMappings.m; sourceTree = "<group>"; };
+		1A23E19714699E73002BBB85 /* JTMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JTMappings.h; path = JTObjectMapping/Source/JTMappings.h; sourceTree = "<group>"; };
+		1A23E19814699E73002BBB85 /* JTMappings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JTMappings.m; path = JTObjectMapping/Source/JTMappings.m; sourceTree = "<group>"; };
+		1A23E19914699E73002BBB85 /* NSObject+JTObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JTObjectMapping.h"; path = "JTObjectMapping/Source/NSObject+JTObjectMapping.h"; sourceTree = "<group>"; };
+		1A23E19A14699E73002BBB85 /* NSObject+JTObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JTObjectMapping.m"; path = "JTObjectMapping/Source/NSObject+JTObjectMapping.m"; sourceTree = "<group>"; };
+		1A23E1C814699F19002BBB85 /* DAApiSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAApiSpec.h; sourceTree = "<group>"; };
+		1A23E1C914699F19002BBB85 /* DAApiSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAApiSpec.m; sourceTree = "<group>"; };
+		1A23E1CB1469A146002BBB85 /* DAApiGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DAApiGroups.h; sourceTree = "<group>"; };
+		1A23E1CC1469A146002BBB85 /* DAApiGroups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAApiGroups.m; sourceTree = "<group>"; };
+		1A23E1CE1469A29C002BBB85 /* DAApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAApi.h; sourceTree = "<group>"; };
+		1A23E1CF1469A29C002BBB85 /* DAApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAApi.m; sourceTree = "<group>"; };
 		1A32F56314645299008EAD4B /* ViewControllerCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerCoordinator.h; sourceTree = "<group>"; };
 		1A32F56414645299008EAD4B /* ViewControllerCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerCoordinator.m; sourceTree = "<group>"; };
 		1A32F5B71465A499008EAD4B /* DASpecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DASpecViewController.h; sourceTree = "<group>"; };
@@ -116,6 +134,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A23E18414699E73002BBB85 /* JTObjectMapping */ = {
+			isa = PBXGroup;
+			children = (
+				1A23E19514699E73002BBB85 /* JTDateMappings.h */,
+				1A23E19614699E73002BBB85 /* JTDateMappings.m */,
+				1A23E19714699E73002BBB85 /* JTMappings.h */,
+				1A23E19814699E73002BBB85 /* JTMappings.m */,
+				1A23E19914699E73002BBB85 /* NSObject+JTObjectMapping.h */,
+				1A23E19A14699E73002BBB85 /* NSObject+JTObjectMapping.m */,
+			);
+			path = JTObjectMapping;
+			sourceTree = "<group>";
+		};
 		1A7261FE1462FBF200E3982D = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +189,12 @@
 				1A32F56414645299008EAD4B /* ViewControllerCoordinator.m */,
 				1A32F5B71465A499008EAD4B /* DASpecViewController.h */,
 				1A32F5B81465A499008EAD4B /* DASpecViewController.m */,
+				1A23E1C814699F19002BBB85 /* DAApiSpec.h */,
+				1A23E1C914699F19002BBB85 /* DAApiSpec.m */,
+				1A23E1CB1469A146002BBB85 /* DAApiGroups.h */,
+				1A23E1CC1469A146002BBB85 /* DAApiGroups.m */,
+				1A23E1CE1469A29C002BBB85 /* DAApi.h */,
+				1A23E1CF1469A29C002BBB85 /* DAApi.m */,
 				1A7262141462FBF300E3982D /* Supporting Files */,
 			);
 			path = DamnAPI;
@@ -196,6 +233,7 @@
 		1A7262421462FD2E00E3982D /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				1A23E18414699E73002BBB85 /* JTObjectMapping */,
 				1A7262CE1462FEB400E3982D /* JSONKit */,
 				1A7262431462FD2E00E3982D /* AFNetworking */,
 			);
@@ -368,6 +406,12 @@
 				1A7262D41462FEB400E3982D /* JSONKit.m in Sources */,
 				1A32F56514645299008EAD4B /* ViewControllerCoordinator.m in Sources */,
 				1A32F5B91465A499008EAD4B /* DASpecViewController.m in Sources */,
+				1A23E1B714699E73002BBB85 /* JTDateMappings.m in Sources */,
+				1A23E1B814699E73002BBB85 /* JTMappings.m in Sources */,
+				1A23E1B914699E73002BBB85 /* NSObject+JTObjectMapping.m in Sources */,
+				1A23E1CA14699F19002BBB85 /* DAApiSpec.m in Sources */,
+				1A23E1CD1469A147002BBB85 /* DAApiGroups.m in Sources */,
+				1A23E1D01469A29C002BBB85 /* DAApi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

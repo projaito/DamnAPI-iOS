@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class DAApiSpec;
+@class DAApi;
+@class DAApiGroups;
+
 @interface DASpecViewController : UITableViewController {
     __strong UITextView *_responseView;
     __strong NSOperationQueue *_queue;
@@ -16,11 +20,12 @@
 
 @property (nonatomic, strong) NSString *specURL;
 @property (nonatomic, strong) NSDictionary *response;
+@property (nonatomic, strong) DAApiSpec    *spec;
 
 - (id)initWithURL:(NSString *)specURL;
 - (void)reloadSpec;
 - (void)showLoadingState:(BOOL)isLoading;
-- (NSDictionary *)apiForIndexPath:(NSIndexPath *)indexPath;
-- (NSDictionary *)apiGroupForSection:(NSInteger)section;
+- (DAApi *)apiForIndexPath:(NSIndexPath *)indexPath;
+- (DAApiGroups *)apiGroupForSection:(NSInteger)section;
 
 @end
